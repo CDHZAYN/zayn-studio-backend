@@ -1,10 +1,10 @@
-package com.zaynStudio.forum;
+package cc.zayn.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ForumApplicationTests {
+class BackendApplicationTests {
 
 	@Test
 	void contextLoads() {
