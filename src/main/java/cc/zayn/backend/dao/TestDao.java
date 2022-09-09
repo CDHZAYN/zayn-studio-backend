@@ -18,7 +18,6 @@ public class TestDao {
     public TestDao(MongoTemplate mongoTemplate){
         this.mongoTemplate = mongoTemplate;
     }
-
     public int test(){
         Query query = new Query(Criteria.where("_id").is(new ObjectId("631837f7af231421fe825617")));
         System.err.println(mongoTemplate.findOne(query,TestPO.class, "test"));
