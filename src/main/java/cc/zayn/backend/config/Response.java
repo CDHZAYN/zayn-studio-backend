@@ -9,6 +9,11 @@ public class Response {
     private final String code;
     private final Object msg;
 
+
+    public static Response res(Object msg) {
+        return new Response("0000", msg);
+    }
+
     public static Response res(String code, Object msg) {
         return new Response(code, msg);
     }
