@@ -1,5 +1,4 @@
-
-FROM nginx
+FROM node:16
 
 MAINTAINER cdhzayn
 
