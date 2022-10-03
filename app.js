@@ -5,6 +5,7 @@ const app = express();
 const bannerController = require('./controller/banner')
 const broSponsorController = require('./controller/broSponsor')
 const articleController = require('./controller/article')
+const cuteSponsorController = require('./controller/cuteSponsor')
 
 app.use(express.json())
 app.use('/static', express.static(path.join(__dirname, 'public')))
@@ -18,6 +19,7 @@ app.use((req,res,next)=>{
 app.use('/banner', bannerController)
 app.use('/bro-sponsor', broSponsorController)
 app.use('/article', articleController)
+app.use('/cute-sponsor', cuteSponsorController)
 
 app.use((req, res, next)=>{
     res.json({

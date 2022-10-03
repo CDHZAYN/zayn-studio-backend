@@ -1,7 +1,7 @@
-const express = require("express");
+const express = require("express")
 const article = require('../db/article/article')
 const articleHTML = require('../db/article/articleHTML')
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 const controller = express.Router()
 
 controller.get('/getAll', async function(req, res, next){
