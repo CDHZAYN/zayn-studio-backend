@@ -11,7 +11,7 @@ controller.get('/getAll', async function(req, res, next){
 
 controller.get('/getHtml', async function(req, res, next){
     let _id = req.query._id
-    res.locals.msg = await articleHTML.findOne(mongoose.Types.ObjectId(_id))
+    res.locals.msg = await articleHTML.findOne({'article_id': _id})
     next()
 })
 
