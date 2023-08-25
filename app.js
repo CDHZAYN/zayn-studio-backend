@@ -7,6 +7,7 @@ const broSponsorController = require('./controller/broSponsor')
 const articleController = require('./controller/article')
 const cuteSponsorController = require('./controller/cuteSponsor')
 const gameController = require('./controller/game')
+const translateController = require('./controller/translate')
 
 app.use(express.json())
 app.use('/static', express.static(path.join(__dirname, 'public')))
@@ -22,6 +23,7 @@ app.use('/bro-sponsor', broSponsorController)
 app.use('/article', articleController)
 app.use('/cute-sponsor', cuteSponsorController)
 app.use('/game', gameController)
+app.use('/translate', translateController)
 
 app.use((req, res, next)=>{
     res.json({
@@ -31,9 +33,10 @@ app.use((req, res, next)=>{
     res.end()
 })
 app.use((err, req, res, next)=>{
+    console.log(err)
     res.status(500).json({
         'code': 0,
-        'msg': err
+        'msg': err.toString()
     })
     res.end()
 })
