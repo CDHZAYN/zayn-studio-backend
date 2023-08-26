@@ -10,7 +10,7 @@ controller.get('/', async function(req, res, next){
     res.locals.msg = await axios.get('https://fanyi-api.baidu.com/api/trans/vip/translate', {
         headers: {'Content-Type': 'application/x-www-form-urlencoded',
             'Access-Control-Allow-Origin': '*'},
-        data: {
+        params: {
             q: text,
             from: 'auto',
             to,
