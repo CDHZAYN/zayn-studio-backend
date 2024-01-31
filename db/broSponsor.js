@@ -1,4 +1,4 @@
-const mongoose = require('./init')
+const mongoose = require('./init').mongoose
 
 const broSponsorSchema = mongoose.Schema({
     name:String,

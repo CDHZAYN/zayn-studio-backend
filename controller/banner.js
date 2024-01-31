@@ -3,7 +3,8 @@ const banner = require('../db/banner')
 const controller = express.Router()
 
 controller.get('/get', async function(req, res, next){
-    res.locals.msg = await banner.find()
+    let result = await banner.find()
+    res.locals.msg = result
     next()
 })
 

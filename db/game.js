@@ -1,4 +1,4 @@
-const mongoose = require('./init')
+const mongoose = require('./init').mongoose
 
 const gameSchema = mongoose.Schema({
     name: String,

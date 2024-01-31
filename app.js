@@ -14,7 +14,7 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
 
 app.use((req,res,next)=>{
-    console.log('newRequest at' + new Date())
+    console.log('to: ',req.originalUrl)
     next()
 })
 

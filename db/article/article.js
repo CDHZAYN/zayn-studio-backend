@@ -1,10 +1,11 @@
-const mongoose = require('../init')
+const cyDriver = require('../init').cyDriver
 
-const articleSchema = mongoose.Schema({
-    _id: String,
-    title: String,
-    desc: String,
-    category: Array,
-}, {collection : 'article'});
+const getSession = function () {
+    return cyDriver.session()
+}
 
-module.exports = mongoose.model('Article', articleSchema)
+const killSession = function (session) {
+    session.close()
+}
+
+module.exports = {getSession, killSession}
